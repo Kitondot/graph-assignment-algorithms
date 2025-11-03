@@ -21,16 +21,22 @@ Run tests
 mvn test
 ```
 The program will:
-```
+
 Read all datasets from the /data/ folder
 
 For each graph:
+
+
 Find SCCs using Tarjan’s algorithm
+
 Build the condensation graph
+
 Perform Topological Sort (Kahn’s algorithm)
+
 Compute Shortest Path and Longest Path on the DAG
+
 Print metrics and a summary line for results
-```
+
 ## 📁 Datasets
 | File                | Vertices (n) | Description                 | Source Node |
 | ------------------- | ------------ | --------------------------- | ----------- |
@@ -89,7 +95,7 @@ data/tasks-large-2.json: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14
 data/tasks-large-3.json: 0 1 6 2 7 3 10 8 4 11 9 5 12 13 14
 ```
 ## Observations and Analysis
-```
+
 The runtime of SCC (Tarjan) grows roughly linearly with the number of vertices and edges.
 
 For pure DAGs (small-2, medium-3, large-3), topological sorting time remains stable.
@@ -99,7 +105,7 @@ Some outlier values (e.g., 211 ms for medium-1, 33 ms for medium-3) are caused b
 SCC count equals 1 for DAGs and increases for cyclic graphs, as expected.
 
 Shortest and Longest Path algorithms on DAGs show similar performance.
-```
+
 ## Testing
 
 Unit tests are included under /src/test/java/:
