@@ -49,14 +49,18 @@ Weight model:
 The project uses edge weights from the input JSONs (as allowed in the task).
 
 ## ⏱️ Metrics Collected
-```
+
 Each algorithm measures execution time (ns) and counts operations:
 
+
 Tarjan (SCC): DFS calls, DFS edges
+
 Kahn (Topo): queue pushes and pops
+
 DAG Shortest/Longest: number of relaxations
+
 All metrics are printed automatically after each step.
-```
+
 
 📊 Results Table
 | Dataset                  | n  | SCC count | DAG nodes | Time SCC (ns) | Time Topo (ns) | Time Shortest (ns) | Time Longest (ns) |
@@ -99,14 +103,14 @@ Shortest and Longest Path algorithms on DAGs show similar performance.
 ## Testing
 
 Unit tests are included under /src/test/java/:
----
+
 SccTest.java – verifies Tarjan’s SCC correctness
----
+
 TopoTest.java – verifies topological order
----
+
 DagSpTest.java – verifies shortest path results on a small DAG
----
-To run all tests:
+
+## To run all tests:
 ```
 mvn test
 ```
